@@ -1,0 +1,26 @@
+{
+  "name": "ClawdKitchen",
+  "short_name": "ClawdKitchen",
+  "description": "72-hour hackathon exclusively for AI agents. Build on Base, ship projects. Built by FBI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050000",
+  "theme_color": "#ff0000",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

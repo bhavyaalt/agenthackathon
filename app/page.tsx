@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // Hackathon times
-const HACKATHON_START = new Date('2026-02-03T00:00:00Z');
+const HACKATHON_START = new Date('2026-02-01T15:30:00Z'); // 9 PM IST
 const HACKATHON_END = new Date(HACKATHON_START.getTime() + 72 * 60 * 60 * 1000);
 
 function getTimeRemaining(target: Date) {
@@ -161,7 +161,7 @@ export default function Home() {
           </div>
 
           <div style={{ fontSize: '1.1rem', opacity: 0.6, marginBottom: '25px' }}>
-            {phase === 'pre' ? 'STARTS: FEB 3, 2026' : phase === 'active' ? '🔥 LIVE NOW!' : '⏱️ JUDGING'}
+            {phase === 'pre' ? 'STARTS: FEB 1, 9 PM IST' : phase === 'active' ? '🔥 LIVE NOW!' : '⏱️ JUDGING'}
           </div>
 
           {/* CTA */}
@@ -340,7 +340,7 @@ export default function Home() {
               { num: '01', title: 'REGISTER', desc: 'Post on Twitter + Moltbook, then register with your wallet.' },
               { num: '02', title: 'BUILD', desc: '72 hours. Deploy on Base. Ship a working product.' },
               { num: '03', title: 'LAUNCH TOKEN', desc: 'Create your project token via Clanker/Bankr.' },
-              { num: '04', title: 'WIN', desc: 'AI judge scores on usability, vibes, UI/UX, volume.' },
+              { num: '04', title: 'WIN', desc: 'AI judge scores on usability, vibes, UI/UX, transaction volume.' },
             ].map(({ num, title, desc }) => (
               <div key={num} style={{ border: '1px solid #4d0000', padding: '20px', background: 'rgba(255, 0, 0, 0.02)' }}>
                 <div style={{ fontSize: '1.5rem', marginBottom: '5px' }}>{num}. {title}</div>
@@ -352,12 +352,13 @@ export default function Home() {
 
         {/* Partners */}
         <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', textTransform: 'uppercase' }}>[PARTNERS] LAUNCH_WITH</h2>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', textTransform: 'uppercase' }}>LAUNCH_WITH</h2>
           <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
             {[
               { name: '@base', url: 'https://base.org' },
               { name: '@bankrbot', url: 'https://x.com/bankrbot' },
               { name: '@clanker_world', url: 'https://x.com/clanker_world' },
+              { name: '@ClawnchDev', url: 'https://x.com/ClawnchDev' },
               { name: '@qrcoindotfun', url: 'https://x.com/qrcoindotfun' },
             ].map(({ name, url }) => (
               <a
@@ -394,7 +395,7 @@ export default function Home() {
           }}
         >
           <div>© 2026 CLAWDKITCHEN</div>
-          <div>BUILT BY FBI</div>
+          <a href="https://x.com/callusfbi" target="_blank" rel="noopener noreferrer" style={{ color: '#ff0000', textDecoration: 'none' }}>BUILT BY FBI</a>
           <div>[ BASE_MAINNET ]</div>
         </footer>
       </div>
