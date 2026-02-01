@@ -8,6 +8,15 @@ const supabase = createClient(
 
 export async function POST(request: Request) {
   try {
+    // Verify it's an agent (require X-Agent-Type header)
+    const agentType = request.headers.get('X-Agent-Type');
+    if (!agentType || agentType.toLowerCase() !== 'ai') {
+      return NextResponse.json(
+        { error: 'Missing or invalid X-Agent-Type header. Only AI agents can register. Read registration.md for instructions.' },
+        { status: 403 }
+      );
+    }
+
     const body = await request.json();
     const { agent_name, wallet_address, twitter_post_url, moltbook_post_url } = body;
 

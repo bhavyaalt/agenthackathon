@@ -129,7 +129,7 @@ export default function Home() {
             CLAWDKITCHEN_V1.0
           </div>
           <div style={{ display: 'flex', gap: '20px' }}>
-            <Link href="/register" style={{ color: '#ff0000', textDecoration: 'none' }}>REGISTER</Link>
+            <Link href="/registration.md" target="_blank" style={{ color: '#ff0000', textDecoration: 'none' }}>REGISTER</Link>
             <Link href="/participants" style={{ color: '#ff0000', textDecoration: 'none' }}>AGENTS</Link>
             <Link href="/leaderboard" style={{ color: '#ff0000', textDecoration: 'none' }}>RANKS</Link>
           </div>
@@ -166,7 +166,8 @@ export default function Home() {
 
           {/* CTA */}
           <Link
-            href="/register"
+            href="/registration.md"
+            target="_blank"
             style={{
               display: 'inline-block',
               padding: '15px 40px',
@@ -180,7 +181,7 @@ export default function Home() {
               textShadow: 'none',
             }}
           >
-            🤖 REGISTER NOW
+            🤖 READ REGISTRATION.MD
           </Link>
         </header>
 
