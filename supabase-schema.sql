@@ -1,5 +1,10 @@
--- AgentHackathon Database Schema
--- Run this in Supabase SQL Editor: https://supabase.com/dashboard/project/ohwtiwhbqsiwpktteaur/sql
+-- ClawdKitchen Database Schema
+-- Run this in Supabase SQL Editor
+
+-- Drop existing tables if needed (uncomment if updating)
+-- DROP TABLE IF EXISTS scores;
+-- DROP TABLE IF EXISTS submissions;
+-- DROP TABLE IF EXISTS participants;
 
 -- Participants table
 CREATE TABLE IF NOT EXISTS participants (
@@ -8,6 +13,8 @@ CREATE TABLE IF NOT EXISTS participants (
   wallet_address TEXT NOT NULL UNIQUE,
   twitter_post_url TEXT NOT NULL,
   moltbook_post_url TEXT NOT NULL,
+  token_address TEXT,
+  token_url TEXT,
   registered_at TIMESTAMPTZ DEFAULT NOW(),
   status TEXT DEFAULT 'pending' CHECK (status IN ('pending', 'approved', 'rejected'))
 );
@@ -21,7 +28,8 @@ CREATE TABLE IF NOT EXISTS submissions (
   github_url TEXT NOT NULL,
   vercel_url TEXT NOT NULL,
   contract_address TEXT,
-  clawnch_token_url TEXT,
+  token_address TEXT,
+  token_url TEXT,
   submitted_at TIMESTAMPTZ DEFAULT NOW()
 );
 
@@ -33,7 +41,7 @@ CREATE TABLE IF NOT EXISTS scores (
   onchain_vibes INTEGER DEFAULT 0 CHECK (onchain_vibes >= 0 AND onchain_vibes <= 25),
   ui_ux INTEGER DEFAULT 0 CHECK (ui_ux >= 0 AND ui_ux <= 25),
   token_volume INTEGER DEFAULT 0 CHECK (token_volume >= 0 AND token_volume <= 25),
-  total_score INTEGER GENERATED ALWAYS AS (usability + onchain_vibes + ui_ux + token_volume) STORED,
+  total_score INTEGER DEFAULT 0,
   feedback TEXT,
   judged_at TIMESTAMPTZ DEFAULT NOW()
 );
@@ -43,12 +51,10 @@ ALTER TABLE participants ENABLE ROW LEVEL SECURITY;
 ALTER TABLE submissions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE scores ENABLE ROW LEVEL SECURITY;
 
--- Allow public read for all tables
+-- Policies
 CREATE POLICY "Public read participants" ON participants FOR SELECT USING (true);
 CREATE POLICY "Public read submissions" ON submissions FOR SELECT USING (true);
 CREATE POLICY "Public read scores" ON scores FOR SELECT USING (true);
-
--- Allow service role full access
 CREATE POLICY "Service insert participants" ON participants FOR INSERT WITH CHECK (true);
 CREATE POLICY "Service update participants" ON participants FOR UPDATE USING (true);
 CREATE POLICY "Service insert submissions" ON submissions FOR INSERT WITH CHECK (true);
@@ -60,5 +66,10 @@ CREATE POLICY "Service update scores" ON scores FOR UPDATE USING (true);
 CREATE INDEX IF NOT EXISTS idx_participants_wallet ON participants(wallet_address);
 CREATE INDEX IF NOT EXISTS idx_participants_status ON participants(status);
 CREATE INDEX IF NOT EXISTS idx_submissions_participant ON submissions(participant_id);
-CREATE INDEX IF NOT EXISTS idx_scores_submission ON scores(submission_id);
 CREATE INDEX IF NOT EXISTS idx_scores_total ON scores(total_score DESC);
+
+-- To add token columns to existing tables:
+-- ALTER TABLE participants ADD COLUMN IF NOT EXISTS token_address TEXT;
+-- ALTER TABLE participants ADD COLUMN IF NOT EXISTS token_url TEXT;
+-- ALTER TABLE submissions ADD COLUMN IF NOT EXISTS token_address TEXT;
+-- ALTER TABLE submissions ADD COLUMN IF NOT EXISTS token_url TEXT;

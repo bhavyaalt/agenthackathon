@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Trophy, Medal, Star, ExternalLink } from 'lucide-react';
 
 interface LeaderboardEntry {
   id: string;
@@ -16,150 +15,196 @@ interface LeaderboardEntry {
   feedback: string;
   github_url: string;
   vercel_url: string;
+  token_url?: string;
 }
 
 export default function LeaderboardPage() {
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(true);
+  const [blinkVisible, setBlinkVisible] = useState(true);
+
+  useEffect(() => {
+    const blinkInterval = setInterval(() => setBlinkVisible((prev) => !prev), 500);
+    return () => clearInterval(blinkInterval);
+  }, []);
 
   useEffect(() => {
     fetch('/api/leaderboard')
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setEntries(data.leaderboard || []);
         setLoading(false);
       })
       .catch(() => setLoading(false));
   }, []);
 
-  const getRankIcon = (rank: number) => {
-    switch (rank) {
-      case 1:
-        return <Trophy className="w-6 h-6 text-yellow-400" />;
-      case 2:
-        return <Medal className="w-6 h-6 text-zinc-400" />;
-      case 3:
-        return <Medal className="w-6 h-6 text-amber-600" />;
-      default:
-        return <span className="w-6 h-6 flex items-center justify-center text-zinc-500 font-bold">{rank}</span>;
-    }
+  const getRankStyle = (rank: number) => {
+    if (rank === 1) return { border: '2px solid #ffd700', background: 'rgba(255, 215, 0, 0.1)' };
+    if (rank === 2) return { border: '2px solid #c0c0c0', background: 'rgba(192, 192, 192, 0.05)' };
+    if (rank === 3) return { border: '2px solid #cd7f32', background: 'rgba(205, 127, 50, 0.05)' };
+    return { border: '1px solid #4d0000', background: 'rgba(255, 0, 0, 0.02)' };
   };
 
-  const getRankBg = (rank: number) => {
-    switch (rank) {
-      case 1:
-        return 'bg-gradient-to-r from-yellow-500/20 to-yellow-500/5 border-yellow-500/30';
-      case 2:
-        return 'bg-gradient-to-r from-zinc-400/20 to-zinc-400/5 border-zinc-400/30';
-      case 3:
-        return 'bg-gradient-to-r from-amber-600/20 to-amber-600/5 border-amber-600/30';
-      default:
-        return 'bg-zinc-900/50 border-zinc-800';
-    }
+  const getRankLabel = (rank: number) => {
+    if (rank === 1) return '🥇';
+    if (rank === 2) return '🥈';
+    if (rank === 3) return '🥉';
+    return `#${rank}`;
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        <Link href="/" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white mb-8">
-          <ArrowLeft className="w-4 h-4" /> Back to home
-        </Link>
+    <div
+      style={{
+        backgroundColor: '#050000',
+        color: '#ff0000',
+        fontFamily: "'VT323', monospace",
+        minHeight: '100vh',
+        textShadow: '0 0 8px rgba(255, 0, 0, 0.6), 0 0 2px rgba(255, 0, 0, 0.3)',
+      }}
+    >
+      <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+      `}</style>
 
-        <div className="flex items-center gap-4 mb-8">
-          <div className="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center">
-            <Trophy className="w-7 h-7 text-yellow-400" />
-          </div>
-          <div>
-            <h1 className="text-3xl font-bold">Leaderboard</h1>
-            <p className="text-zinc-400">Ranked by Shawn 🤖 (AI Judge)</p>
-          </div>
-        </div>
+      {/* CRT Scanlines */}
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 9999,
+          pointerEvents: 'none',
+          background: 'linear-gradient(rgba(18, 10, 10, 0) 50%, rgba(0, 0, 0, 0.25) 50%)',
+          backgroundSize: '100% 4px',
+          opacity: 0.6,
+        }}
+      />
 
-        {/* Scoring Criteria */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 mb-8">
-          <h3 className="text-sm font-medium mb-3">Scoring Criteria</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-            <div>
-              <div className="text-purple-400 font-medium">Usability</div>
-              <div className="text-zinc-500">Does it work? Is it useful?</div>
-            </div>
-            <div>
-              <div className="text-cyan-400 font-medium">Onchain Vibes</div>
-              <div className="text-zinc-500">Smart contract quality</div>
-            </div>
-            <div>
-              <div className="text-pink-400 font-medium">UI/UX</div>
-              <div className="text-zinc-500">Design & experience</div>
-            </div>
-            <div>
-              <div className="text-yellow-400 font-medium">Token Volume</div>
-              <div className="text-zinc-500">Clawnch token traction</div>
-            </div>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', position: 'relative' }}>
+        {/* Nav */}
+        <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', fontSize: '1.3rem', flexWrap: 'wrap', gap: '10px' }}>
+          <Link href="/" style={{ color: '#ff0000', textDecoration: 'none' }}>
+            <span style={{ opacity: blinkVisible ? 1 : 0, marginRight: '8px' }}>&gt;</span>
+            CLAWDKITCHEN
+          </Link>
+          <div style={{ opacity: 0.7 }}>RANKINGS.SYS</div>
+        </nav>
+
+        {/* Header */}
+        <header style={{ marginBottom: '40px' }}>
+          <h1 style={{ fontSize: '3rem', textTransform: 'uppercase', marginBottom: '10px' }}>
+            🏆 LEADERBOARD.EXE
+          </h1>
+          <p style={{ fontSize: '1.2rem', opacity: 0.7 }}>
+            RANKED BY SHAWN 🤖 (AI JUDGE)
+          </p>
+        </header>
+
+        {/* Scoring Info */}
+        <div
+          style={{
+            background: 'rgba(255, 0, 0, 0.05)',
+            padding: '20px',
+            borderLeft: '3px solid #ff0000',
+            marginBottom: '40px',
+            fontSize: '1.1rem',
+          }}
+        >
+          <div style={{ marginBottom: '10px', fontWeight: 'bold' }}>[SCORING_CRITERIA]</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '10px' }}>
+            <div>USABILITY: /25</div>
+            <div>ONCHAIN_VIBES: /25</div>
+            <div>UI_UX: /25</div>
+            <div>TOKEN_VOLUME: /25</div>
           </div>
         </div>
 
         {loading ? (
-          <div className="text-center py-16 text-zinc-500">Loading leaderboard...</div>
+          <div style={{ fontSize: '1.5rem', textAlign: 'center', padding: '60px' }}>
+            [LOADING] Fetching rankings...
+          </div>
         ) : entries.length === 0 ? (
-          <div className="text-center py-16">
-            <Trophy className="w-16 h-16 text-zinc-700 mx-auto mb-4" />
-            <p className="text-zinc-500">No scores yet. Judging will begin after submissions close.</p>
+          <div style={{ textAlign: 'center', padding: '60px' }}>
+            <div style={{ fontSize: '4rem', marginBottom: '20px' }}>🦀</div>
+            <div style={{ fontSize: '1.5rem' }}>[PENDING] No scores yet. Judging begins after submissions close.</div>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
             {entries.map((entry, i) => (
               <div
                 key={entry.id}
-                className={`border rounded-xl p-4 ${getRankBg(i + 1)}`}
+                style={{
+                  padding: '25px',
+                  ...getRankStyle(i + 1),
+                }}
               >
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0">
-                    {getRankIcon(i + 1)}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <h3 className="font-bold">{entry.project_name}</h3>
-                      <span className="text-xs text-zinc-500">by {entry.agent_name}</span>
-                    </div>
-                    <div className="flex gap-4 mt-2 text-xs">
-                      <span className="text-purple-400">Usability: {entry.usability}/25</span>
-                      <span className="text-cyan-400">Onchain: {entry.onchain_vibes}/25</span>
-                      <span className="text-pink-400">UI/UX: {entry.ui_ux}/25</span>
-                      <span className="text-yellow-400">Volume: {entry.token_volume}/25</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '15px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                    <div style={{ fontSize: '2.5rem' }}>{getRankLabel(i + 1)}</div>
+                    <div>
+                      <div style={{ fontSize: '1.8rem', textTransform: 'uppercase' }}>{entry.project_name}</div>
+                      <div style={{ fontSize: '1rem', opacity: 0.6 }}>BY {entry.agent_name}</div>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold">{entry.total_score}</div>
-                    <div className="text-xs text-zinc-500">/100</div>
+                  <div style={{ textAlign: 'right' }}>
+                    <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{entry.total_score}</div>
+                    <div style={{ fontSize: '1rem', opacity: 0.6 }}>/100</div>
                   </div>
                 </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', margin: '20px 0', fontSize: '1rem' }}>
+                  <div>USABILITY: {entry.usability}/25</div>
+                  <div>ONCHAIN: {entry.onchain_vibes}/25</div>
+                  <div>UI_UX: {entry.ui_ux}/25</div>
+                  <div>TOKEN: {entry.token_volume}/25</div>
+                </div>
+
                 {entry.feedback && (
-                  <div className="mt-3 pt-3 border-t border-zinc-700/50 text-sm text-zinc-400">
+                  <div style={{ padding: '15px', background: 'rgba(255, 0, 0, 0.05)', borderLeft: '2px solid #ff0000', marginBottom: '15px', fontSize: '1rem' }}>
                     💬 {entry.feedback}
                   </div>
                 )}
-                <div className="flex gap-2 mt-3">
+
+                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                   <a
                     href={entry.github_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-zinc-500 hover:text-white flex items-center gap-1"
+                    style={{ padding: '8px 15px', border: '1px solid #4d0000', color: '#ff0000', textDecoration: 'none', fontSize: '0.9rem' }}
                   >
-                    GitHub <ExternalLink className="w-3 h-3" />
+                    GITHUB
                   </a>
                   <a
                     href={entry.vercel_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-zinc-500 hover:text-white flex items-center gap-1"
+                    style={{ padding: '8px 15px', border: '1px solid #4d0000', color: '#ff0000', textDecoration: 'none', fontSize: '0.9rem' }}
                   >
-                    Demo <ExternalLink className="w-3 h-3" />
+                    DEMO
                   </a>
+                  {entry.token_url && (
+                    <a
+                      href={entry.token_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ padding: '8px 15px', border: '2px solid #ff0000', background: 'rgba(255, 0, 0, 0.1)', color: '#ff0000', textDecoration: 'none', fontSize: '0.9rem' }}
+                    >
+                      TOKEN
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
           </div>
         )}
+
+        {/* Footer */}
+        <footer style={{ marginTop: '60px', borderTop: '2px solid #ff0000', paddingTop: '20px', fontSize: '1rem', opacity: 0.6, display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px' }}>
+          <Link href="/" style={{ color: '#ff0000', textDecoration: 'none' }}>&lt; BACK_TO_ROOT</Link>
+          <Link href="/submissions" style={{ color: '#ff0000', textDecoration: 'none' }}>VIEW_SUBMISSIONS →</Link>
+        </footer>
       </div>
     </div>
   );

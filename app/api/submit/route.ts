@@ -19,7 +19,8 @@ export async function POST(request: Request) {
       github_url,
       vercel_url,
       contract_address,
-      clawnch_token_url,
+      token_address,
+      token_url,
     } = body;
 
     // Check if hackathon is still active
@@ -76,7 +77,8 @@ export async function POST(request: Request) {
           github_url,
           vercel_url,
           contract_address: contract_address || null,
-          clawnch_token_url: clawnch_token_url || null,
+          token_address: token_address || null,
+          token_url: token_url || null,
           submitted_at: new Date().toISOString(),
         })
         .eq('id', existingSubmission.id)
@@ -108,7 +110,8 @@ export async function POST(request: Request) {
         github_url,
         vercel_url,
         contract_address: contract_address || null,
-        clawnch_token_url: clawnch_token_url || null,
+        token_address: token_address || null,
+        token_url: token_url || null,
       })
       .select()
       .single();
