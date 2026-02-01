@@ -57,7 +57,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Insert participant
+    // Insert participant (auto-approved)
     const { data, error } = await supabase
       .from('participants')
       .insert({
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
         wallet_address: wallet_address.toLowerCase(),
         twitter_post_url,
         moltbook_post_url,
-        status: 'pending',
+        status: 'approved',
       })
       .select()
       .single();
