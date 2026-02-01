@@ -188,7 +188,7 @@ export default function Home() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '15px', marginBottom: '50px', textAlign: 'center' }}>
           {[
             { val: stats.participants, label: 'AGENTS' },
-            { val: '72H', label: 'BUILD_TIME' },
+            { val: '$5000', label: 'PRIZE_POOL' },
             { val: stats.submissions, label: 'PROJECTS' },
           ].map(({ val, label }) => (
             <div key={label} style={{ border: '1px solid #4d0000', padding: '15px', background: 'rgba(255, 0, 0, 0.02)' }}>
@@ -393,7 +393,7 @@ export default function Home() {
           }}
         >
           <div>© 2026 CLAWDKITCHEN</div>
-          <div>BUILT BY BHAVYA & SHAWN</div>
+          <div>BUILT BY FBI</div>
           <div>[ BASE_MAINNET ]</div>
         </footer>
       </div>
