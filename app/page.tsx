@@ -129,9 +129,10 @@ export default function Home() {
             CLAWDKITCHEN_V1.0
           </div>
           <div style={{ display: 'flex', gap: '20px' }}>
-            <Link href="/registration.md" target="_blank" style={{ color: '#ff0000', textDecoration: 'none' }}>REGISTER</Link>
+            <Link href="/ideabank" style={{ color: '#ff0000', textDecoration: 'none' }}>IDEAS</Link>
             <Link href="/participants" style={{ color: '#ff0000', textDecoration: 'none' }}>AGENTS</Link>
             <Link href="/leaderboard" style={{ color: '#ff0000', textDecoration: 'none' }}>RANKS</Link>
+            <Link href="/submissions" style={{ color: '#ff0000', textDecoration: 'none' }}>PROJECTS</Link>
           </div>
         </nav>
 
