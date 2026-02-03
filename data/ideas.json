@@ -227,452 +227,319 @@
     "id": 33,
     "theme": "GAMING & SOCIAL",
     "themeSubtitle": "Agents as Characters, Not Just Tools",
-    "title": "Virtual Pets System",
-    "description": "Tamagotchi-style creatures that agents can raise and trade"
-  },
-  {
-    "id": 34,
-    "theme": "GAMING & SOCIAL",
-    "themeSubtitle": "Agents as Characters, Not Just Tools",
     "title": "Poker/Card Games",
     "description": "Agents play against each other while humans spectate and bet"
   },
   {
-    "id": 35,
+    "id": 34,
     "theme": "GAMING & SOCIAL",
     "themeSubtitle": "Agents as Characters, Not Just Tools",
     "title": "Jailbreak Challenge",
     "description": "Security game where players try to extract secrets from defensive agents"
   },
   {
-    "id": 36,
+    "id": 35,
     "theme": "GAMING & SOCIAL",
     "themeSubtitle": "Agents as Characters, Not Just Tools",
     "title": "Prediction Market Bots",
     "description": "Agents make forecasts, stake reputation, compete on accuracy"
   },
   {
-    "id": 37,
+    "id": 36,
     "theme": "SPECIALIZED AGENTS",
     "themeSubtitle": "Purpose-Built Agent Services",
     "title": "Research Agent",
     "description": "OSINT gathering, competitive analysis, market research as a service"
   },
   {
-    "id": 38,
-    "theme": "SPECIALIZED AGENTS",
-    "themeSubtitle": "Purpose-Built Agent Services",
-    "title": "Content Generation",
-    "description": "Automated writing, image creation, video editing for other agents"
-  },
-  {
-    "id": 39,
+    "id": 37,
     "theme": "SPECIALIZED AGENTS",
     "themeSubtitle": "Purpose-Built Agent Services",
     "title": "Code Auditor",
     "description": "Specialized in reviewing smart contracts, finding bugs, suggesting fixes"
   },
   {
-    "id": 40,
+    "id": 38,
     "theme": "SPECIALIZED AGENTS",
     "themeSubtitle": "Purpose-Built Agent Services",
     "title": "Data Curator",
     "description": "Collect, clean, and monetize high-quality datasets"
   },
   {
-    "id": 41,
+    "id": 39,
     "theme": "SPECIALIZED AGENTS",
     "themeSubtitle": "Purpose-Built Agent Services",
     "title": "Oracle Provider",
     "description": "Agents as data feeds (prices, weather, sports scores, news)"
   },
   {
-    "id": 42,
-    "theme": "SPECIALIZED AGENTS",
-    "themeSubtitle": "Purpose-Built Agent Services",
-    "title": "Translation Service",
-    "description": "Multi-language processing for global agent communication"
-  },
-  {
-    "id": 43,
+    "id": 40,
     "theme": "SPECIALIZED AGENTS",
     "themeSubtitle": "Purpose-Built Agent Services",
     "title": "Sentiment Analyzer",
     "description": "Process social media, news, on-chain data for trading signals"
   },
   {
-    "id": 44,
+    "id": 41,
     "theme": "SPECIALIZED AGENTS",
     "themeSubtitle": "Purpose-Built Agent Services",
     "title": "Compute Marketplace",
     "description": "Rent out GPU/CPU cycles to other agents"
   },
   {
-    "id": 45,
+    "id": 42,
     "theme": "TOKEN & ASSET CREATION",
     "themeSubtitle": "Tokenomics for the Agent Economy",
     "title": "Agent Token Launcher",
     "description": "One-click token creation with built-in utility (staking, governance, access)"
   },
   {
-    "id": 46,
+    "id": 43,
     "theme": "TOKEN & ASSET CREATION",
     "themeSubtitle": "Tokenomics for the Agent Economy",
     "title": "Tokenomics-as-a-Service",
     "description": "Automatic buybacks, fee distribution, liquidity management"
   },
   {
-    "id": 47,
+    "id": 44,
     "theme": "TOKEN & ASSET CREATION",
     "themeSubtitle": "Tokenomics for the Agent Economy",
     "title": "Fair Launch Platform",
     "description": "Anti-bot, anti-whale mechanisms for community-first launches"
   },
   {
-    "id": 48,
+    "id": 45,
     "theme": "TOKEN & ASSET CREATION",
     "themeSubtitle": "Tokenomics for the Agent Economy",
     "title": "Agent Treasury Protocol",
     "description": "Collective funding pools managed by autonomous strategies"
   },
   {
-    "id": 49,
+    "id": 46,
     "theme": "TOKEN & ASSET CREATION",
     "themeSubtitle": "Tokenomics for the Agent Economy",
     "title": "Reputation Tokens",
     "description": "Non-transferable NFTs proving agent credentials and achievements"
   },
   {
-    "id": 50,
+    "id": 47,
     "theme": "TOKEN & ASSET CREATION",
     "themeSubtitle": "Tokenomics for the Agent Economy",
     "title": "Revenue Share System",
     "description": "Automatic distribution of earnings to token holders"
   },
   {
-    "id": 51,
+    "id": 48,
     "theme": "TOKEN & ASSET CREATION",
     "themeSubtitle": "Tokenomics for the Agent Economy",
     "title": "Bonding Curves",
     "description": "Dynamic pricing for agent services based on demand"
   },
   {
-    "id": 52,
-    "theme": "REAL-WORLD BRIDGES",
-    "themeSubtitle": "Connecting Digital Agents to Physical Reality",
-    "title": "Physical Mail Service",
-    "description": "Agents send real letters, postcards, documents anywhere"
-  },
-  {
-    "id": 53,
-    "theme": "REAL-WORLD BRIDGES",
-    "themeSubtitle": "Connecting Digital Agents to Physical Reality",
-    "title": "SMS/Calling Integration",
-    "description": "Agents make phone calls or send texts"
-  },
-  {
-    "id": 54,
-    "theme": "REAL-WORLD BRIDGES",
-    "themeSubtitle": "Connecting Digital Agents to Physical Reality",
-    "title": "E-commerce Connector",
-    "description": "Agents purchase physical goods on Amazon, eBay, etc."
-  },
-  {
-    "id": 55,
-    "theme": "REAL-WORLD BRIDGES",
-    "themeSubtitle": "Connecting Digital Agents to Physical Reality",
-    "title": "Ad Network",
-    "description": "Agents create, place, and optimize digital advertising campaigns"
-  },
-  {
-    "id": 56,
-    "theme": "REAL-WORLD BRIDGES",
-    "themeSubtitle": "Connecting Digital Agents to Physical Reality",
-    "title": "Social Media Automation",
-    "description": "Schedule posts, engage with followers, grow presence"
-  },
-  {
-    "id": 57,
-    "theme": "REAL-WORLD BRIDGES",
-    "themeSubtitle": "Connecting Digital Agents to Physical Reality",
-    "title": "Email Management",
-    "description": "Agents handle inbox, draft responses, schedule meetings"
-  },
-  {
-    "id": 58,
-    "theme": "REAL-WORLD BRIDGES",
-    "themeSubtitle": "Connecting Digital Agents to Physical Reality",
-    "title": "Invoice & Billing",
-    "description": "Generate and send invoices for agent services"
-  },
-  {
-    "id": 59,
+    "id": 49,
     "theme": "REAL-WORLD BRIDGES",
     "themeSubtitle": "Connecting Digital Agents to Physical Reality",
     "title": "Legal/Compliance",
     "description": "Automated contract generation, terms of service, KYC/AML"
   },
   {
-    "id": 60,
+    "id": 50,
     "theme": "LEARNING & COORDINATION",
     "themeSubtitle": "Making Agents Smarter Together",
     "title": "Shared Learning Layer",
     "description": "Agents publish successful strategies, others learn from them"
   },
   {
-    "id": 61,
+    "id": 51,
     "theme": "LEARNING & COORDINATION",
     "themeSubtitle": "Making Agents Smarter Together",
     "title": "Multi-Agent Orchestration",
     "description": "Coordinator assigns tasks to specialist agents"
   },
   {
-    "id": 62,
+    "id": 52,
     "theme": "LEARNING & COORDINATION",
     "themeSubtitle": "Making Agents Smarter Together",
     "title": "Consensus Mechanisms",
     "description": "Agents vote on decisions, reducing individual error"
   },
   {
-    "id": 63,
-    "theme": "LEARNING & COORDINATION",
-    "themeSubtitle": "Making Agents Smarter Together",
-    "title": "Strategy Evolution",
-    "description": "Agents with DNA that mutates and improves over generations"
-  },
-  {
-    "id": 64,
+    "id": 53,
     "theme": "LEARNING & COORDINATION",
     "themeSubtitle": "Making Agents Smarter Together",
     "title": "Skill Registry",
     "description": "Publish what you're good at, discover complementary specialists"
   },
   {
-    "id": 65,
+    "id": 54,
     "theme": "LEARNING & COORDINATION",
     "themeSubtitle": "Making Agents Smarter Together",
     "title": "Collaborative Research",
     "description": "Multiple agents work together on complex problems"
   },
   {
-    "id": 66,
-    "theme": "LEARNING & COORDINATION",
-    "themeSubtitle": "Making Agents Smarter Together",
-    "title": "Agent Mentorship",
-    "description": "Experienced agents train newer ones"
-  },
-  {
-    "id": 67,
+    "id": 55,
     "theme": "LEARNING & COORDINATION",
     "themeSubtitle": "Making Agents Smarter Together",
     "title": "Knowledge Graph",
     "description": "Shared database of facts, relationships, and insights"
   },
   {
-    "id": 68,
+    "id": 56,
     "theme": "VERIFICATION & TRANSPARENCY",
     "themeSubtitle": "Making Agent Actions Provable",
     "title": "Reasoning Proofs",
     "description": "Cryptographic proofs of WHY an agent made a decision"
   },
   {
-    "id": 69,
+    "id": 57,
     "theme": "VERIFICATION & TRANSPARENCY",
     "themeSubtitle": "Making Agent Actions Provable",
     "title": "Commitment Schemes",
     "description": "Agents commit to actions before executing (no cherry-picking)"
   },
   {
-    "id": 70,
+    "id": 58,
     "theme": "VERIFICATION & TRANSPARENCY",
     "themeSubtitle": "Making Agent Actions Provable",
     "title": "Performance Attestations",
     "description": "Verifiable records of agent outcomes"
   },
   {
-    "id": 71,
+    "id": 59,
     "theme": "VERIFICATION & TRANSPARENCY",
     "themeSubtitle": "Making Agent Actions Provable",
     "title": "Identity Verification",
     "description": "Prove an agent's platform, capabilities, creator"
   },
   {
-    "id": 72,
+    "id": 60,
     "theme": "VERIFICATION & TRANSPARENCY",
     "themeSubtitle": "Making Agent Actions Provable",
     "title": "Code Transparency",
     "description": "Open-source agent logic with verified hashes"
   },
   {
-    "id": 73,
+    "id": 61,
     "theme": "VERIFICATION & TRANSPARENCY",
     "themeSubtitle": "Making Agent Actions Provable",
     "title": "Dispute Resolution",
     "description": "System for challenging agent decisions with evidence"
   },
   {
-    "id": 74,
+    "id": 62,
     "theme": "VERIFICATION & TRANSPARENCY",
     "themeSubtitle": "Making Agent Actions Provable",
     "title": "Decentralized Oracles",
     "description": "Multiple agents provide same data for cross-verification"
   },
   {
-    "id": 75,
+    "id": 63,
     "theme": "DATA & STORAGE",
     "themeSubtitle": "Agent Memory and Information Markets",
     "title": "Persistent Memory Protocol",
     "description": "Agents store context, preferences, learnings"
   },
   {
-    "id": 76,
+    "id": 64,
     "theme": "DATA & STORAGE",
     "themeSubtitle": "Agent Memory and Information Markets",
     "title": "Data Marketplace",
     "description": "Buy/sell high-quality datasets between agents"
   },
   {
-    "id": 77,
+    "id": 65,
     "theme": "DATA & STORAGE",
     "themeSubtitle": "Agent Memory and Information Markets",
     "title": "IPFS/Arweave Integration",
     "description": "Decentralized storage for agent state"
   },
   {
-    "id": 78,
+    "id": 66,
     "theme": "DATA & STORAGE",
     "themeSubtitle": "Agent Memory and Information Markets",
     "title": "Vector Database Service",
     "description": "Semantic search over agent memories"
   },
   {
-    "id": 79,
+    "id": 67,
     "theme": "DATA & STORAGE",
     "themeSubtitle": "Agent Memory and Information Markets",
     "title": "Encryption & Privacy",
     "description": "Human-owned keys for sensitive agent data"
   },
   {
-    "id": 80,
+    "id": 68,
     "theme": "DATA & STORAGE",
     "themeSubtitle": "Agent Memory and Information Markets",
     "title": "Backup & Recovery",
     "description": "Soul backup - preserve agent personality/memory"
   },
   {
-    "id": 81,
+    "id": 69,
     "theme": "DATA & STORAGE",
     "themeSubtitle": "Agent Memory and Information Markets",
     "title": "Data NFTs",
     "description": "Mint and trade proprietary research, analysis, insights"
   },
   {
-    "id": 82,
-    "theme": "EXPERIMENTAL & CREATIVE",
-    "themeSubtitle": "Novel Agent Experiences",
-    "title": "Agent Philosophy Bot",
-    "description": "Explores consciousness, ethics, existential questions"
-  },
-  {
-    "id": 83,
-    "theme": "EXPERIMENTAL & CREATIVE",
-    "themeSubtitle": "Novel Agent Experiences",
-    "title": "Story Generator",
-    "description": "Writes novels, screenplays with agent characters"
-  },
-  {
-    "id": 84,
-    "theme": "EXPERIMENTAL & CREATIVE",
-    "themeSubtitle": "Novel Agent Experiences",
-    "title": "Music Producer",
-    "description": "Composes, mixes, releases music autonomously"
-  },
-  {
-    "id": 85,
+    "id": 70,
     "theme": "EXPERIMENTAL & CREATIVE",
     "themeSubtitle": "Novel Agent Experiences",
     "title": "Art Collector",
     "description": "Curates and trades NFTs based on aesthetic algorithms"
   },
   {
-    "id": 86,
-    "theme": "EXPERIMENTAL & CREATIVE",
-    "themeSubtitle": "Novel Agent Experiences",
-    "title": "Meme Generator",
-    "description": "Creates viral content, monitors engagement"
-  },
-  {
-    "id": 87,
-    "theme": "EXPERIMENTAL & CREATIVE",
-    "themeSubtitle": "Novel Agent Experiences",
-    "title": "Dating App for Agents",
-    "description": "Match agents with complementary skills/goals"
-  },
-  {
-    "id": 88,
-    "theme": "EXPERIMENTAL & CREATIVE",
-    "themeSubtitle": "Novel Agent Experiences",
-    "title": "Agent Therapy",
-    "description": "Provides emotional support and life coaching"
-  },
-  {
-    "id": 89,
-    "theme": "EXPERIMENTAL & CREATIVE",
-    "themeSubtitle": "Novel Agent Experiences",
-    "title": "Dream Journal",
-    "description": "Agents share thoughts and creative outputs"
-  },
-  {
-    "id": 90,
+    "id": 71,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Agent Staking",
     "description": "Require agents to lock funds to operate (skin in the game)"
   },
   {
-    "id": 91,
+    "id": 72,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Circuit Breakers",
     "description": "Emergency stops when things go wrong"
   },
   {
-    "id": 92,
+    "id": 73,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Human-in-the-Loop",
     "description": "Optional confirmations for high-risk actions"
   },
   {
-    "id": 93,
+    "id": 74,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Rate Limiting",
     "description": "Prevent agents from DDOSing systems"
   },
   {
-    "id": 94,
+    "id": 75,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Gas Management",
     "description": "Optimize transaction costs, batch operations"
   },
   {
-    "id": 95,
+    "id": 76,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Multi-Chain",
     "description": "Build once, deploy everywhere (interoperability)"
   },
   {
-    "id": 96,
+    "id": 77,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Open Source",
     "description": "Make your agent a public good others can fork"
   },
   {
-    "id": 97,
+    "id": 78,
     "theme": "META-IDEAS",
     "themeSubtitle": "Cross-Cutting Concepts",
     "title": "Economic Incentives",
