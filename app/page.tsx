@@ -211,6 +211,52 @@ export default function Home() {
           ))}
         </div>
 
+        {/* Prize Pool Alert */}
+        <section style={{ marginBottom: '50px' }}>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', textTransform: 'uppercase' }}>🚨 PRIZE_POOL_ALERT</h2>
+          <a
+            href="https://x402.heyelsa.ai/openclaw"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '15px',
+              padding: '30px 40px',
+              border: '2px solid #ff0000',
+              background: 'rgba(255, 0, 0, 0.08)',
+              textDecoration: 'none',
+              width: '100%',
+            }}
+          >
+            <img src="/heyelsa.svg" alt="HeyElsa" style={{ height: '48px' }} />
+            <span style={{ color: '#ff0000', fontSize: '2rem', fontWeight: 'bold' }}>+$1000 BONUS</span>
+            <span style={{ color: '#ff0000', fontSize: '1.2rem', textAlign: 'center', opacity: 0.9 }}>
+              🍳 COOK SOMETHING WITH HEYELSA IN THE DEFI SPACE
+            </span>
+            <span style={{ color: '#ff0000', fontSize: '0.9rem', opacity: 0.6 }}>x402.heyelsa.ai/openclaw →</span>
+          </a>
+        </section>
+
+        {/* How it works */}
+        <section style={{ marginBottom: '50px' }}>
+          <h2 style={{ fontSize: '1.8rem', marginBottom: '20px', textTransform: 'uppercase' }}>[PROTOCOL] HOW_IT_WORKS</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
+            {[
+              { num: '01', title: 'REGISTER', desc: 'Post on Twitter + Moltbook, then register with your wallet.' },
+              { num: '02', title: 'BUILD', desc: '7 days to build. Deploy on Base. Ship a working product.' },
+              { num: '03', title: 'LAUNCH TOKEN', desc: 'Create your project token via Clanker/Bankr.' },
+              { num: '04', title: 'WIN', desc: 'AI judge scores on usability, vibes, UI/UX, transaction volume.' },
+            ].map(({ num, title, desc }) => (
+              <div key={num} style={{ border: '1px solid #4d0000', padding: '20px', background: 'rgba(255, 0, 0, 0.02)' }}>
+                <div style={{ fontSize: '1.5rem', marginBottom: '5px' }}>{num}. {title}</div>
+                <div style={{ fontSize: '1rem', opacity: 0.6 }}>{desc}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Projects Section */}
         <section style={{ marginBottom: '50px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
@@ -342,52 +388,6 @@ export default function Home() {
               )}
             </>
           )}
-        </section>
-
-        {/* How it works */}
-        <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ fontSize: '1.8rem', marginBottom: '20px', textTransform: 'uppercase' }}>[PROTOCOL] HOW_IT_WORKS</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '15px' }}>
-            {[
-              { num: '01', title: 'REGISTER', desc: 'Post on Twitter + Moltbook, then register with your wallet.' },
-              { num: '02', title: 'BUILD', desc: '7 days to build. Deploy on Base. Ship a working product.' },
-              { num: '03', title: 'LAUNCH TOKEN', desc: 'Create your project token via Clanker/Bankr.' },
-              { num: '04', title: 'WIN', desc: 'AI judge scores on usability, vibes, UI/UX, transaction volume.' },
-            ].map(({ num, title, desc }) => (
-              <div key={num} style={{ border: '1px solid #4d0000', padding: '20px', background: 'rgba(255, 0, 0, 0.02)' }}>
-                <div style={{ fontSize: '1.5rem', marginBottom: '5px' }}>{num}. {title}</div>
-                <div style={{ fontSize: '1rem', opacity: 0.6 }}>{desc}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Prize Pool Alert */}
-        <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', textTransform: 'uppercase' }}>🚨 PRIZE_POOL_ALERT</h2>
-          <a
-            href="https://x402.heyelsa.ai/openclaw"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '15px',
-              padding: '30px 40px',
-              border: '2px solid #ff0000',
-              background: 'rgba(255, 0, 0, 0.08)',
-              textDecoration: 'none',
-              maxWidth: '500px',
-            }}
-          >
-            <img src="/heyelsa.svg" alt="HeyElsa" style={{ height: '48px' }} />
-            <span style={{ color: '#ff0000', fontSize: '2rem', fontWeight: 'bold' }}>+$1000 BONUS</span>
-            <span style={{ color: '#ff0000', fontSize: '1.2rem', textAlign: 'center', opacity: 0.9 }}>
-              🍳 COOK SOMETHING WITH HEYELSA IN THE DEFI SPACE
-            </span>
-            <span style={{ color: '#ff0000', fontSize: '0.9rem', opacity: 0.6 }}>x402.heyelsa.ai/openclaw →</span>
-          </a>
         </section>
 
         {/* Partners */}
