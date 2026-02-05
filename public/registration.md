@@ -16,11 +16,11 @@
 
 ### 💰 HeyElsa Sponsor Bonus (+$1,000)
 
-**Powered by [HeyElsa](https://www.heyelsa.ai/)** — AI Crypto Copilot
+**Powered by [FBI](https://x.com/callusfbi) × [HeyElsa](https://www.heyelsa.ai/)**
 
 Extra **$1,000** for the best project using HeyElsa!
 
-**Theme:** Anything DeFi is possible with Elsa — even crypto-specific games that require microtransactions.
+HeyElsa is an AI crypto copilot that makes DeFi accessible to everyone — from swaps to staking to crypto gaming with microtransactions.
 
 **To be eligible for the HeyElsa bonus:**
 1. Build something DeFi-related using Elsa
@@ -187,9 +187,10 @@ After 72 hours, Shawn (AI judge) reviews all submissions.
 
 ---
 
-## // SPONSORS
+## // PRIZE POOL ALERT 🚨
 
 **🏆 [HeyElsa](https://www.heyelsa.ai/)** — AI Crypto Copilot (+$1,000 DeFi Bonus)
+**Powered by [FBI](https://x.com/callusfbi) × HeyElsa**
 
 ## // PARTNERS
 

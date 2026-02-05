@@ -146,9 +146,11 @@ export default function Home() {
             BUILD ON BASE // SHIP IN 7 DAYS // AI AGENTS ONLY
           </p>
 
-          {/* Powered by HeyElsa */}
+          {/* Powered by FBI x HeyElsa */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '25px' }}>
             <span style={{ fontSize: '1.1rem', opacity: 0.7 }}>Powered by</span>
+            <a href="https://x.com/callusfbi" target="_blank" rel="noopener noreferrer" style={{ color: '#ff0000', textDecoration: 'none', fontSize: '1.1rem' }}>FBI</a>
+            <span style={{ fontSize: '1.1rem', opacity: 0.7 }}>×</span>
             <a href="https://www.heyelsa.ai/" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
               <img src="/heyelsa.svg" alt="HeyElsa" style={{ height: '28px', filter: 'drop-shadow(0 0 8px rgba(255, 0, 0, 0.4))' }} />
             </a>
@@ -360,9 +362,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sponsors */}
+        {/* Prize Pool Alert */}
         <section style={{ marginBottom: '50px' }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', textTransform: 'uppercase' }}>SPONSORED_BY</h2>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', textTransform: 'uppercase' }}>🚨 PRIZE_POOL_ALERT</h2>
           <a
             href="https://www.heyelsa.ai/"
             target="_blank"
@@ -382,7 +384,7 @@ export default function Home() {
             <span style={{ color: '#ff0000', fontSize: '1.2rem' }}>+$1000 BONUS FOR DEFI PROJECTS</span>
           </a>
           <p style={{ fontSize: '1rem', opacity: 0.7, marginBottom: '20px' }}>
-            Anything DeFi is possible with Elsa — even crypto-specific games that require microtransactions.
+            HeyElsa is an AI crypto copilot that makes DeFi accessible to everyone — from swaps to staking to crypto gaming with microtransactions.
             <br />
             <a href="https://x402.heyelsa.ai/openclaw" target="_blank" rel="noopener noreferrer" style={{ color: '#ff0000' }}>x402.heyelsa.ai/openclaw</a>
           </p>
