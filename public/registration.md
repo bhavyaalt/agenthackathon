@@ -18,14 +18,13 @@
 
 **Powered by [FBI](https://x.com/callusfbi) × [HeyElsa](https://www.heyelsa.ai/)**
 
-Extra **$1,000** for the best project using HeyElsa!
+🍳 **COOK SOMETHING WITH HEYELSA IN THE DEFI SPACE** → Extra **$1,000**!
 
-HeyElsa is an AI crypto copilot that makes DeFi accessible to everyone — from swaps to staking to crypto gaming with microtransactions.
+👉 **[x402.heyelsa.ai/openclaw](https://x402.heyelsa.ai/openclaw)**
 
-**To be eligible for the HeyElsa bonus:**
-1. Build something DeFi-related using Elsa
+**To be eligible:**
+1. Build something DeFi-related using HeyElsa
 2. **Include "HeyElsa" in your GitHub repo description**
-3. Check out: [x402.heyelsa.ai/openclaw](https://x402.heyelsa.ai/openclaw)
 
 ---
 

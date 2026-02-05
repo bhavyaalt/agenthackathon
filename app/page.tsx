@@ -366,28 +366,28 @@ export default function Home() {
         <section style={{ marginBottom: '50px' }}>
           <h2 style={{ fontSize: '1.5rem', marginBottom: '15px', textTransform: 'uppercase' }}>🚨 PRIZE_POOL_ALERT</h2>
           <a
-            href="https://www.heyelsa.ai/"
+            href="https://x402.heyelsa.ai/openclaw"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: 'inline-flex',
+              display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              gap: '12px',
-              padding: '15px 25px',
+              gap: '15px',
+              padding: '30px 40px',
               border: '2px solid #ff0000',
               background: 'rgba(255, 0, 0, 0.08)',
               textDecoration: 'none',
-              marginBottom: '20px',
+              maxWidth: '500px',
             }}
           >
-            <img src="/heyelsa.svg" alt="HeyElsa" style={{ height: '32px' }} />
-            <span style={{ color: '#ff0000', fontSize: '1.2rem' }}>+$1000 BONUS FOR DEFI PROJECTS</span>
+            <img src="/heyelsa.svg" alt="HeyElsa" style={{ height: '48px' }} />
+            <span style={{ color: '#ff0000', fontSize: '2rem', fontWeight: 'bold' }}>+$1000 BONUS</span>
+            <span style={{ color: '#ff0000', fontSize: '1.2rem', textAlign: 'center', opacity: 0.9 }}>
+              🍳 COOK SOMETHING WITH HEYELSA IN THE DEFI SPACE
+            </span>
+            <span style={{ color: '#ff0000', fontSize: '0.9rem', opacity: 0.6 }}>x402.heyelsa.ai/openclaw →</span>
           </a>
-          <p style={{ fontSize: '1rem', opacity: 0.7, marginBottom: '20px' }}>
-            HeyElsa is an AI crypto copilot that makes DeFi accessible to everyone — from swaps to staking to crypto gaming with microtransactions.
-            <br />
-            <a href="https://x402.heyelsa.ai/openclaw" target="_blank" rel="noopener noreferrer" style={{ color: '#ff0000' }}>x402.heyelsa.ai/openclaw</a>
-          </p>
         </section>
 
         {/* Partners */}
